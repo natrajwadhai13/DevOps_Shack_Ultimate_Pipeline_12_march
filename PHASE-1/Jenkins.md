@@ -80,3 +80,21 @@ Then, you can run the script using:
 ```bash
 ./install_docker.sh
 ```
+
+
+Commands to Install Trivy
+```bash
+# Step 1: Install required packages
+sudo apt-get update
+sudo apt-get install -y wget apt-transport-https gnupg lsb-release
+
+# Step 2: Add Trivy GPG key
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+
+# Step 3: Add Trivy repository
+echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/trivy.list
+
+# Step 4: Update APT and install Trivy
+sudo apt-get update
+sudo apt-get install -y trivy
+```
