@@ -1,19 +1,14 @@
 
 Create ServiceAccount with YAML
+
 Here’s a simple YAML file to create a ServiceAccount:
+
 vi svc.yaml
 
-# service-account.yaml
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: jenkins
-  namespace: webapps
-
-
   ==================================
-# create ns webapps 
-# kubectl apply -f svc.yaml
+  # command 
+ create ns webapps 
+ kubectl apply -f svc.yaml
 ========================================
 
 ### Creating Service Account
