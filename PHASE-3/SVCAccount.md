@@ -7,8 +7,11 @@ vi svc.yaml
 
 
 command 
+
  kubectl create ns webapps 
+ 
  kubectl apply -f svc.yaml
+ 
 ========================================
 
 ### Creating Service Account
