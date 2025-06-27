@@ -5,9 +5,9 @@ Here’s a simple YAML file to create a ServiceAccount:
 
 vi svc.yaml
 
-  ==================================
-  # command 
- create ns webapps 
+
+command 
+ kubectl create ns webapps 
  kubectl apply -f svc.yaml
 ========================================
 
