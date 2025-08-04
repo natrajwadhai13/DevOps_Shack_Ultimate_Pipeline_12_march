@@ -1,12 +1,6 @@
 
 
-```yaml
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: jenkins
-  namespace: webapps
-```
+
 
 
 
@@ -17,11 +11,12 @@ metadata:
 ```yaml
         stage('Deploy To Kubernetes') {
             steps {
-               withKubeConfig(caCertificate: '', clusterName: 'kubernetes', contextName: '', credentialsId: 'k8-cred', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://172.31.8.146:6443') {
+               withKubeConfig(caCertificate: '', clusterName: 'kubernetes', contextName: '', credentialsId: 'k8-cred', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://192.168.16.131:6443') {
                         sh "kubectl apply -f deployment-service.yaml"
                 }
 ```
 step 1 - create service account and secete and configure Secrete in jenkins (Refer  Phase 3 - SVCAccount )
+
 step 2 - Pipeline Syntax take help
 
 ```yaml
@@ -38,8 +33,4 @@ root@Master:~/.kube# cat config
 
 - Cluster name - kubernetes --- ( Copy from above command )
 - Namespace - webapps
-
-
-
-
 ```
