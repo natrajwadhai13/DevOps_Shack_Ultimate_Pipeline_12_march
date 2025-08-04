@@ -141,3 +141,15 @@ metadata:
     kubernetes.io/service-account.name: jenkins
 
 ```
+
+
+added tokan to jenkins - 
+Manage Jenkins- Credentials-> System -> Global credentials (unrestricted)
+fill this details
+Kind - secret text
+Scope - Globel (Jenkins nodes, item, all chield )
+Secret- k8s key
+ID- k8-cred
+Description-  k8-cred
+
+thin click on create
