@@ -34,3 +34,16 @@ root@Master:~/.kube# cat config
 - Cluster name - kubernetes --- ( Copy from above command )
 - Namespace - webapps
 ```
+
+#  After that we need to create in GitHub Repo file is deployment-service.yaml
+
+cjange docker name -natrajwadhai13/boardshack:latest
+ name: boardgame-deployment
+ app: boardgame
+ - name: boardgame
+   refer github file
+
+# imp concepts
+- Cluser ip - its interner ip
+- load balencer - outside of word 
+- node port - no need to used - we are using worker ip
