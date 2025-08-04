@@ -25,10 +25,18 @@ metadata:
   namespace: webapps
 ```
 
+command -
+create webapps SVC account 
+- kubectl create ns webapps
+- kubectl apply -f svc.yaml
+
+
 ### Create Role 
 
 file name role.yaml
-# vi role.yaml
+command - 
+- vi role.yaml
+- kubectl apply -f role.yaml
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -70,6 +78,8 @@ rules:
       - services
     verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
 ```
+
+
 
 ### Bind the role to service account
 
