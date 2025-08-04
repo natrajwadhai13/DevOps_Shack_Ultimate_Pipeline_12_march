@@ -27,6 +27,8 @@ metadata:
 
 ### Create Role 
 
+file name role.yaml
+# vi role.yaml
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
