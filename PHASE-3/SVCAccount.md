@@ -83,6 +83,10 @@ rules:
 
 ### Bind the role to service account
 
+command -
+- vi bind.yaml
+- kubectl apply -f bind.yaml
+
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
